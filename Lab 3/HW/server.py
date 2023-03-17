@@ -41,7 +41,9 @@ while connected: #client is connected
 
                 total = value * 200
 
-                conn.send(str(total).encode(FORMAT))
+                total = "Tk " + str(total)
+
+                conn.send(total.encode(FORMAT))
 
             elif value > 40:
 
@@ -51,7 +53,9 @@ while connected: #client is connected
 
                 total = 8000 + extra_money
 
-                conn.send(str(total).encode(FORMAT))
+                total = "Tk " + str(total)         
+
+                conn.send(total.encode(FORMAT))
 
 conn.close()
             
